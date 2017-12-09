@@ -66,10 +66,10 @@ func (a *App) login() {
 	for !a.authed {
 		// Ask the user for their credentials.
 		for a.username == "" {
-			a.username = input("Instagram Username: ")
+			a.username = os.Args[1]
 		}
 		for a.password == "" {
-			a.password = getPassword("Password (no echo): ")
+			a.password = os.Args[2]
 		}
 
 		// Try the login.
